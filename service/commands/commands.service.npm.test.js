@@ -81,8 +81,8 @@ describe('Commands:', function runTests() {
         .run(CommandsService.cmd.npm.bin)
         .subscribe((data) => {
           data.stdout.should.be.String();
-
-          data.stdout.should.match(/npm-gui/);
+          console.log(data.stdout);
+          data.stdout.should.match(/test-project/);
           data.stdout.should.match(/\.bin/);
           done();
         });
