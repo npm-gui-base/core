@@ -38,7 +38,7 @@ describe('Dependencies Service - Base module', () => {
 
   it('should check dependencies versions and return array', (done) => {
     DependenciesService
-      .getModules(false)
+      .get(false)
       .subscribe((dependencies) => {
         ProjectServiceMock.checkReposAvailability.should.be.called();
 
@@ -156,7 +156,7 @@ describe('Dependencies Service - Base module', () => {
 
   it('should check devDependencies versions and return array', (done) => {
     DependenciesService
-      .getModules(true)
+      .get(true)
       .subscribe((devDependencies) => {
         ProjectServiceMock.checkReposAvailability.should.be.called();
 

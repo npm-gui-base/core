@@ -7,57 +7,57 @@ const Utils = require('./utils.service');
 
 describe('Utils', () => {
 
-  describe('isDevModules', () => {
+  describe('isDevDependencies', () => {
     it('should return true', () => {
-      Utils.isDevModules({
+      Utils.isDevDependencies({
         originalUrl: '/devModules',
       }).should.be.eql(true);
 
-      Utils.isDevModules({
+      Utils.isDevDependencies({
         originalUrl: '/dev',
       }).should.be.eql(true);
 
-      Utils.isDevModules({
+      Utils.isDevDependencies({
         originalUrl: '/modulesDev',
       }).should.be.eql(true);
 
-      Utils.isDevModules({
+      Utils.isDevDependencies({
         originalUrl: '/modules-dev',
       }).should.be.eql(true);
     });
 
     it('should return false', () => {
-      Utils.isDevModules({
+      Utils.isDevDependencies({
         originalUrl: '/modules',
       }).should.be.eql(false);
 
-      Utils.isDevModules({
+      Utils.isDevDependencies({
         originalUrl: '/public',
       }).should.be.eql(false);
 
-      Utils.isDevModules({
+      Utils.isDevDependencies({
         originalUrl: '/controller',
       }).should.be.eql(false);
     });
   });
 
-  describe('isGlobalModules', () => {
+  describe('isGlobalPackages', () => {
     it('should return true', () => {
-      Utils.isGlobalModules({
+      Utils.isGlobalPackages({
         originalUrl: '/globalModules',
       }).should.be.eql(true);
 
-      Utils.isGlobalModules({
+      Utils.isGlobalPackages({
         originalUrl: '/global',
       }).should.be.eql(true);
     });
 
     it('should return false', () => {
-      Utils.isGlobalModules({
+      Utils.isGlobalPackages({
         originalUrl: '/modules',
       }).should.be.eql(false);
 
-      Utils.isGlobalModules({
+      Utils.isGlobalPackages({
         originalUrl: '/public',
       }).should.be.eql(false);
     });
