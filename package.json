@@ -4,12 +4,13 @@
   "description": "Graphic User Interface for NPM packages/tasks for front and back -end users.",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha ./service/**/*.test.js --compilers js:babel-register "
+    "test": "node node_modules/mocha/bin/mocha ./service/**/*.test.js --compilers js:babel-register --require babel-polyfill"
   },
   "author": "Paweł Stefański",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.17.0",
+    "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.16.0",
     "babel-register": "^6.16.3",
     "cross-spawn": "^4.0.2",
