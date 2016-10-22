@@ -2,6 +2,7 @@ language: node_js
 before_script:
   - npm install -g bower
 node_js:
+  - "6.9"
   - "6.2"
   - "5.11"
   - "4.1"
