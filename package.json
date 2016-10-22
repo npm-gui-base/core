@@ -4,7 +4,7 @@
   "description": "Graphic User Interface for NPM packages/tasks for front and back -end users.",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha ./service/**/*.test.js --compilers js:babel-register "
+    "test": "node node_modules/mocha/bin/mocha ./service/**/*.test.js --compilers js:babel-core "
   },
   "author": "Paweł Stefański",
   "license": "MIT",
