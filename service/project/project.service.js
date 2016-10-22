@@ -1,5 +1,5 @@
 const Rx = require('rx');
-const fs = require('fs');
+const fsAccess = require('fs-access');
 const PackageJson = require('../../model/package-json.js');
 
 let projectPath = process.cwd();
@@ -25,7 +25,7 @@ module.exports = {
   isRepoAvailableTest(repo) {
     const fileToTest = repo === 'bower' ? 'bower.json' : 'package.json';
     return Rx.Observable.create((observer) => {
-      fs.access(`${this.getPath()}/${fileToTest}`, (err) => {
+      fsAccess(`${this.getPath()}/${fileToTest}`, (err) => {
         if (!err) {
           observer.onNext(true);
         } else {
