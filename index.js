@@ -1,7 +1,7 @@
-const model = require('./model');
-const service = require('./service');
+const Model = require('./model');
+const Service = require('./service');
 
 module.exports = {
-  service,
-  model,
+  Service,
+  Model,
 };
